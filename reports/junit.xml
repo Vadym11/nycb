@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="1" failures="1" hostname="VadymMac" name="pytest" skipped="0" tests="1" time="5.722" timestamp="2020-09-12T00:22:14.737324"><testcase classname="ui_test" name="test_apply_pay_deposit_option" time="0.252"><failure message="urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host=&apos;127.0.0.1&apos;, port=61333): Max retries exceeded with url: /session/67ad874e6f8fd33917686d4c62da8403/element/603a93dd-17f3-4788-aae2-f3ff5cf454ee/click (Caused by NewConnectionError(&apos;&lt;urllib3.connection.HTTPConnection object at 0x10721f2d0&gt;: Failed to establish a new connection: [Errno 61] Connection refused&apos;))">../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connection.py:160: in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/util/connection.py:84: in create_connection
+    raise err
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/util/connection.py:74: in create_connection
+    sock.connect(sa)
+E   ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connectionpool.py:677: in urlopen
+    chunked=chunked,
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connectionpool.py:392: in _make_request
+    conn.request(method, url, **httplib_request_kw)
+/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py:1252: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py:1298: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py:1247: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py:1026: in _send_output
+    self.send(msg)
+/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py:966: in send
+    self.connect()
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connection.py:187: in connect
+    conn = self._new_conn()
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connection.py:172: in _new_conn
+    self, &quot;Failed to establish a new connection: %s&quot; % e
+E   urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x10721f2d0&gt;: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/pytest_bdd/scenario.py:227: in scenario_wrapper
+    _execute_scenario(feature, scenario, request, encoding)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/pytest_bdd/scenario.py:189: in _execute_scenario
+    _execute_step_function(request, scenario, step, step_func)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/pytest_bdd/scenario.py:130: in _execute_step_function
+    step_func(**kwargs)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/pytest_bdd/steps.py:162: in step_func
+    result = request.getfixturevalue(func.__name__)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/_pytest/fixtures.py:581: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/_pytest/fixtures.py:601: in _get_active_fixturedef
+    self._compute_fixture_value(fixturedef)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/_pytest/fixtures.py:683: in _compute_fixture_value
+    fixturedef.execute(request=subrequest)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/_pytest/fixtures.py:1062: in execute
+    result = hook.pytest_fixture_setup(fixturedef=self, request=request)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/pluggy/hooks.py:286: in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/pluggy/manager.py:93: in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/pluggy/manager.py:87: in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/_pytest/fixtures.py:1117: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/_pytest/fixtures.py:924: in call_fixture_func
+    fixture_result = fixturefunc(**kwargs)
+scenario_s/steps/test_steps.py:10: in open_page1
+    funcs.feb_cn(&apos;mega-menu-link&apos;)
+helpers/funcs.py:15: in feb_cn
+    return link.click()
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webelement.py:80: in click
+    self._execute(Command.CLICK_ELEMENT)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webelement.py:633: in _execute
+    return self._parent.execute(command, params)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py:319: in execute
+    response = self.command_executor.execute(driver_command, params)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/selenium/webdriver/remote/remote_connection.py:374: in execute
+    return self._request(command_info[0], url, body=data)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/selenium/webdriver/remote/remote_connection.py:397: in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/request.py:80: in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/request.py:171: in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/poolmanager.py:336: in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connectionpool.py:767: in urlopen
+    **response_kw
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connectionpool.py:767: in urlopen
+    **response_kw
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connectionpool.py:767: in urlopen
+    **response_kw
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connectionpool.py:727: in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/util/retry.py:439: in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host=&apos;127.0.0.1&apos;, port=61333): Max retries exceeded with url: /session/67ad874e6f8fd33917686d4c62da8403/element/603a93dd-17f3-4788-aae2-f3ff5cf454ee/click (Caused by NewConnectionError(&apos;&lt;urllib3.connection.HTTPConnection object at 0x10721f2d0&gt;: Failed to establish a new connection: [Errno 61] Connection refused&apos;))</failure></testcase><testcase classname="ui_test" name="test_apply_pay_deposit_option" time="0.003"><error message="failed on teardown with &quot;urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host=&apos;127.0.0.1&apos;, port=61333): Max retries exceeded with url: /session/67ad874e6f8fd33917686d4c62da8403/window (Caused by NewConnectionError(&apos;&lt;urllib3.connection.HTTPConnection object at 0x107e23c90&gt;: Failed to establish a new connection: [Errno 61] Connection refused&apos;))&quot;">../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connection.py:160: in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/util/connection.py:84: in create_connection
+    raise err
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/util/connection.py:74: in create_connection
+    sock.connect(sa)
+E   ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connectionpool.py:677: in urlopen
+    chunked=chunked,
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connectionpool.py:392: in _make_request
+    conn.request(method, url, **httplib_request_kw)
+/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py:1252: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py:1298: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py:1247: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py:1026: in _send_output
+    self.send(msg)
+/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/http/client.py:966: in send
+    self.connect()
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connection.py:187: in connect
+    conn = self._new_conn()
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connection.py:172: in _new_conn
+    self, &quot;Failed to establish a new connection: %s&quot; % e
+E   urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x107e23c90&gt;: Failed to establish a new connection: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+scenario_s/steps/test_steps.py:48: in teardown
+    browser.close()
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py:688: in close
+    self.execute(Command.CLOSE)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py:319: in execute
+    response = self.command_executor.execute(driver_command, params)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/selenium/webdriver/remote/remote_connection.py:374: in execute
+    return self._request(command_info[0], url, body=data)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/selenium/webdriver/remote/remote_connection.py:397: in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/request.py:76: in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/request.py:97: in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/poolmanager.py:336: in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connectionpool.py:767: in urlopen
+    **response_kw
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connectionpool.py:767: in urlopen
+    **response_kw
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connectionpool.py:767: in urlopen
+    **response_kw
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/connectionpool.py:727: in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+../../Try/nycb-qaa/venv/lib/python3.7/site-packages/urllib3/util/retry.py:439: in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E   urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host=&apos;127.0.0.1&apos;, port=61333): Max retries exceeded with url: /session/67ad874e6f8fd33917686d4c62da8403/window (Caused by NewConnectionError(&apos;&lt;urllib3.connection.HTTPConnection object at 0x107e23c90&gt;: Failed to establish a new connection: [Errno 61] Connection refused&apos;))</error></testcase></testsuite></testsuites>
